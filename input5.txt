@@ -1,0 +1,19 @@
+Location CBD Wicked Automatic         # Location CBD has Wicked campervan with automatic transmission
+Location CBD Zeppelin Automatic       # Location CBD has Zeppelin campervan with automatic transmission
+Location CBD Floyd Automatic          # Location CBD has Floyd campervan with automatic transmission
+Location Penrith Queen Manual         # Location Penrith has Queen campervan with manual transmission
+Location Cremorne Ramones Automatic   # Location Cremorne has Ramones campervan with automatic transmission
+Location Cremorne Nirvana Automatic   # Location Cremorne has Nirvana campervan with automatic transmission
+Location Sutherland Purple Manual     # Location Sutherland has Purple campervan with manual transmission
+Location Sutherland Hendrix Manual    # Location Sutherland has Hendrix campervan with manual transmission
+Location Sutherland Eagle Manual      # Location Sutherland has Eagle campervan with manual transmission
+# Test whether campervans can be rented from different depots when one depot exhausts its allocation of vehicles
+Request 1 23 Mar 25 12 Mar 26 3 Automatic 1 Manual
+        # Request 1 is for 3 Automatic and 1 Manual campervan from 23:00 on Mar 25 to 12:00 on Mar 26
+        # Assign Wicked, Zeppelin, Floyd of CBD and Queen of Penrith
+        # Output Booking 1 CBD Wicked, Zeppelin, Floyd; Penrith Queen
+Cancel 1
+ # Cancel booking 1
+        # Deassign Wicked, Zeppelin and Floyd of CBD, Queen of Penrith
+        # Output Cancel 1
+Print CBD
